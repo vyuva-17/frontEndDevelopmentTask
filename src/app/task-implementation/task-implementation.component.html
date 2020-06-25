@@ -1,0 +1,27 @@
+<div class="containerOfComponents">
+  <mat-toolbar  color="primary"  role="heading" aria-label="header">
+    <mat-toolbar-row >
+      <h2 class="subHeader">Task Implementation</h2>
+    </mat-toolbar-row>
+  </mat-toolbar>
+<div style="text-align:center">
+    <h2 style="text-align:center;color:#3f51b5">
+      Welcome to Employee child component!
+    </h2>
+      <table border=1>
+        <tr class='tableHeader'><th>Name</th>
+          <th>Age</th>
+          <th>Salary</th>
+          </tr>
+      <tr *ngFor="let d of employeeData">
+      <app-display-employee-child [employee]="d">
+        </app-display-employee-child>
+    </tr></table>
+
+
+
+  <mat-spinner *ngIf="spinner"></mat-spinner>
+
+
+ </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="containerOfComponents home">
+  <mat-toolbar  color="primary"  role="heading" aria-label="header">
+    <mat-toolbar-row >
+      <h1 class="subHeader">About</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div >
+    <h2 style="text-align:center;color:#3f51b5">
+      Instructions to check the Task Implementation!
+    </h2>
+    <h3 class='subHeadingColor'>Task1: (Setup Angular Routing for 3 Pages [1 Page without authentication, 2
+      Pages with Authentication using CanActivate])</h3>
+      <h4 class='subHeadingColorh5'>Functionality</h4>
+      <p class='subContentP'>
+        I have implemented this using CanActivate API. In this User Token is stored in local Storage as userCredentials. AuthGaurdServices will check wether the local Storage Key is set or not if it is not set then CanActivate API will route to the About Component otherwise you can navigate to all tabs. You can check this by removing the userCredentials Key in localStorage this key will set when the Application gets loaded.
+      </p>
+      <h4 class='subHeadingColorh5'>Component</h4>
+      <p class='subContentP'>auth-gaurd.services.ts,app-module.ts,app-routing.ts this are files which contains major functionality for task1 implementation</p>
+      <h3 class='subHeadingColor'>Task2: (Use HttpInterceptor to set header token)</h3>
+        <h4 class='subHeadingColorh5'>Functionality</h4>
+        <p class='subContentP'>
+          I have implemented this using Http_Interceptor API. In this I have created interceptor to handle request and response headers for all requset and response passed/get from the Rest service. Using Http_Interceptor API it is easy to maintain all request and response header handling in one place. You check this in Task Implementation Page when page loads request will pass with Authorized token to get employee data.
+        </p>
+        <h4 class='subHeadingColorh5'>Component</h4>
+        <p class='subContentP'>interceptor.ts,app-module.ts,rest.service.ts this are files which contains major functionality for task2 implementation</p>
+        <h3 class='subHeadingColor'>Task3: (Use HttpInterceptor to Handle Ajax Error)</h3>
+          <h4 class='subHeadingColorh5'>Functionality</h4>
+          <p class='subContentP'>
+            I have implemented this using Http_Interceptor API. In this I have created interceptor to handle request and response Ajax Error for all requset and response passed/get from the Rest service. Using Http_Interceptor API it is easy to maintain all request and response Ajax error in one place. You check this in Task Implementation Page when page loads request will get response as employee data. Just go to code and change the Request URL the Http_Interceptor will Catch and throw the error to the corresponding services.
+          </p>
+          <h4 class='subHeadingColorh5'>Component</h4>
+          <p class='subContentP'>interceptor.ts,app-module.ts,rest.service.ts this are files which contains major functionality for task3 implementation</p>
+          <h3 class='subHeadingColor'>Task4: (Pass Message between two Components)</h3>
+            <h4 class='subHeadingColorh5'>Functionality</h4>
+            <p class='subContentP'>
+              I have implemented this using @Input Decorator. In this I have get the employee data from rest services and passed the data stream to the child component(display-employee-child.component) from parent component(task-implementation.component) data stream received and passed through data binding and @Input directive to render the data in child component(display-employee-child.component) rendered data is displayed in parent component(task-implementation.component) .
+            </p>
+            <h4 class='subHeadingColorh5'>Component</h4>
+            <p class='subContentP'>task-implementation.component.ts,display-employee-child.component.ts,app-module.ts,rest.service.ts this are files which contains major functionality for task4 implementation</p>
+            <h3 class='subHeadingColor'>Task5: (Create Service to return some duplicate ajax value)</h3>
+              <h4 class='subHeadingColorh5'>Functionality</h4>
+              <p class='subContentP'>
+                I have implemented this using HTTP API. In this I have requested the dummy services for employee data in rest services and the employee data from rest services and passed the data stream to the child component(display-employee-child.component) from parent component(task-implementation.component) data stream received and passed through data binding and @Input directive to render the data in child component(display-employee-child.component) rendered data is displayed in parent component(task-implementation.component).
+              </p>
+              <h4 class='subHeadingColorh5'>Component</h4>
+              <p class='subContentP'>task-implementation.component.ts,display-employee-child.component.ts,app-module.ts,rest.service.ts this are files which contains major functionality for task5 implementation</p>
+  </div>
+</div>
