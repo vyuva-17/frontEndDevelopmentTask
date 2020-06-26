@@ -1,31 +1,42 @@
+<!--App Shell Introduction-->
 <div class="headerOfComponent">
+  <!--header and navigation of the of the app shell-->
   <mat-toolbar color="primary" class="header" role="heading" aria-label="header">
     <button mat-icon-button matTooltip="Menu" matTooltipClass="tooltipPrimary" matTooltipPosition="below"
       id="mobileViewMenu" (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <a><img class="mobileViewIcon"  [routerLink]="'/app-home'" src="../assets/icons/icon-72x72.png" title="Home" alt="Home"></a>
+    <a><img class="mobileViewIcon" [routerLink]="'/app-home'" src="../assets/icons/icon-72x72.png" title="Home"
+        alt="Home"></a>
     <h1><button matTooltip="Home" matTooltipClass="tooltipPrimary" matTooltipPosition="below" id="desktopTabViewHeader"
         [routerLink]="'/app-home'" mat-button>Front End Development Task</button></h1>
     <button matTooltip="Click to check task implementation" matTooltipClass="tooltipPrimary" matTooltipPosition="below"
-      id="desktopTabViewHeader" class="nav" [routerLink]="'/app-task-implementation'" mat-button>Task Implementation</button>
-    <button matTooltip="click to view task implementation output and summary of the task implementation" matTooltipClass="tooltipPrimary" matTooltipPosition="left"
-      id="desktopTabViewHeader" class="nav" [routerLink]="'/app-task-summary'" mat-button>Task Summary</button>
+      id="desktopTabViewHeader" class="nav" [routerLink]="'/app-task-implementation'" mat-button>Task
+      Implementation</button>
+    <button matTooltip="click to view task implementation output and summary of the task implementation"
+      matTooltipClass="tooltipPrimary" matTooltipPosition="left" id="desktopTabViewHeader" class="nav"
+      [routerLink]="'/app-task-summary'" mat-button>Task Summary</button>
   </mat-toolbar>
+  <!--side nav container will only the screen size is resized to mobile size-->
   <mat-sidenav-container>
     <mat-sidenav #sidenav role="navigation" id="mat-nav-list">
       <mat-nav-list>
-        <a mat-list-item matTooltip="Click to check task implementation" matTooltipClass="tooltipPrimary" matTooltipPosition="right"
-          [routerLink]="'/app-task-implementation'" (click)="sidenav.toggle()">Task Implementation</a>
-        <a mat-list-item matTooltip="click to view task implementation output and summary of the task implementation" matTooltipClass="tooltipPrimary" matTooltipPosition="below"
-          [routerLink]="'/app-task-summary'" (click)="sidenav.toggle()">Task Summary</a>
+        <a mat-list-item matTooltip="Click to check task implementation" matTooltipClass="tooltipPrimary"
+          matTooltipPosition="right" [routerLink]="'/app-task-implementation'" (click)="sidenav.toggle()">Task
+          Implementation</a>
+        <a mat-list-item matTooltip="click to view task implementation output and summary of the task implementation"
+          matTooltipClass="tooltipPrimary" matTooltipPosition="below" [routerLink]="'/app-task-summary'"
+          (click)="sidenav.toggle()">Task Summary</a>
         <a mat-list-item matTooltip="Close Navbar" matTooltipClass="tooltipPrimary" matTooltipPosition="below"
-          (click)="sidenav.toggle()"  mat-list-item>Close</a>
+          (click)="sidenav.toggle()" mat-list-item>Close</a>
       </mat-nav-list>
 
     </mat-sidenav>
+    <!--content of the application will load inside the mat-side-nav-only-->
     <mat-sidenav-content role="main" style="height:100vh">
+      <!--router-outlet is used to display the routed component chunk in UI(View)-->
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
+<!--End of the App shell-->

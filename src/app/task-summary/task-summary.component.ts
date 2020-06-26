@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+/****
+Component Directive to display the items that are assosiated with this component
+****/
 @Component({
   selector: 'app-task-summary',
   templateUrl: './task-summary.component.html',
-  styleUrls: ['./task-summary.component.sass']
 })
+/***
+ class will act as interface for ONInit API
+ ***/
 export class TaskSummaryComponent implements OnInit {
 
   constructor() { }

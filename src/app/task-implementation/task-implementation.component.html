@@ -1,27 +1,35 @@
+<!--Introduction to the Task Implementation Component-->
 <div class="containerOfComponents">
-  <mat-toolbar  color="primary"  role="heading" aria-label="header">
-    <mat-toolbar-row >
+  <!--Header using mat-tool bar content-->
+  <mat-toolbar color="primary" role="heading" aria-label="header">
+    <mat-toolbar-row>
       <h2 class="subHeader">Task Implementation</h2>
     </mat-toolbar-row>
   </mat-toolbar>
-<div style="text-align:center">
+  <div style="text-align:center">
+    <!--sub header of the component-->
     <h2 style="text-align:center;color:#3f51b5">
       Welcome to Employee child component!
     </h2>
-      <table border=1>
-        <tr class='tableHeader'><th>Name</th>
-          <th>Age</th>
-          <th>Salary</th>
-          </tr>
+    <!--table is designed with structural directive to iterate the fetched employee data and passed to the display-employee-child component and the received data from child component is displayed in parent as per Task -5 -->
+    <table border=1>
+      <tr class='tableHeader'>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+      </tr>
       <tr *ngFor="let d of employeeData">
-      <app-display-employee-child [employee]="d">
+        <!--employeeChild component rendered data with designed is rendered in parent component with in a table as per task-5 -->
+        <app-display-employee-child [employee]="d">
         </app-display-employee-child>
-    </tr></table>
+      </tr>
+    </table>
 
 
+    <!--Structural directive to check condition for the response is received or not based on that value spinner will render till the response displayed in table-->
+    <mat-spinner *ngIf="spinner"></mat-spinner>
 
-  <mat-spinner *ngIf="spinner"></mat-spinner>
 
-
- </div>
+  </div>
 </div>
+<!--End of the Task Implementation Component--->
