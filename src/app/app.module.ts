@@ -9,12 +9,14 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app-material.module';
 import { AppComponent } from './app.component';
-import { RestService } from './interceptor';
+import { Interceptor } from './interceptor';
 import { HomeComponent } from './home/home.component';
 import { TaskSummaryComponent } from './task-summary/task-summary.component';
 import { TaskImplementationComponent } from './task-implementation/task-implementation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DisplayEmployeeChildComponent } from './display-employee-child/display-employee-child.component';
+
+
 
 /***
   Declaration of the component which is belonged to this module,
@@ -36,13 +38,14 @@ import { DisplayEmployeeChildComponent } from './display-employee-child/display-
     BrowserAnimationsModule,
     HttpClientModule,
     HttpModule,
-    AppMaterialModule
+    AppMaterialModule,
+
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
-    useClass: RestService,
+    useClass: Interceptor,
     multi: true
-  }
+  },
   ],
   bootstrap: [AppComponent]
 })

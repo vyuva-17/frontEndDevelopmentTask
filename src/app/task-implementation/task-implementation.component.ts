@@ -3,6 +3,8 @@
 ***/
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
+import { AppMaterialModule } from '../app-material.module';
+
 /****
 Component Directive to display the items that are associated with this component.
 ****/
@@ -10,9 +12,10 @@ Component Directive to display the items that are associated with this component
   selector: 'app-task-implementation',
   templateUrl: './task-implementation.component.html',
   styleUrls: ['./task-implementation.component.scss'],
+  providers:[RestService]
 })
 
-export class TaskImplementationComponent {
+export class TaskImplementationComponent{
   employeeData: any;
   spinner: any;
   /***

@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators'
 /***
  HTTP Interceptor Interface to implement task-2,3 it will handle the response and request header and http error in one place return the cached error to the corresponding request and response API
 ***/
-export class RestService implements HttpInterceptor {
+export class Interceptor implements HttpInterceptor {
   constructor() { }
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     /***
